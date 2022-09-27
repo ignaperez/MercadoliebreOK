@@ -243,8 +243,9 @@ footer section p i {
 .formulario-registro {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .registro-input {
@@ -265,6 +266,8 @@ footer section p i {
 .contenedor-form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
 }
 
 .p-form {
@@ -286,10 +289,30 @@ footer section p i {
 .intereses {
     display: flex;
     padding: 1%;
-    flex-wrap: nowrap;  
+    flex-wrap: nowrap;
 }
-.espacio{
+
+.espacio {
     padding-left: 1vh;
+}
+
+.botones-form {
+    border: #1259c3 solid 1vh;
+    border-radius: 1.5vh;
+    background-color: #1259c3;
+    color: white;
+    flex-wrap: wrap;
+
+}
+
+.contenedor-botones {
+    align-items: center;
+    text-align: center;
+    width: 82%;
+    justify-content: space-between;
+    padding: 2vh;
+    
+
 }
 
 
@@ -298,7 +321,8 @@ footer section p i {
     .item {
         width: 43%;
     }
-    .burger-menu{
+
+    .burger-menu {
         display: none;
     }
 
