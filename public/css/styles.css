@@ -298,6 +298,9 @@ footer section p i {
     .item {
         width: 43%;
     }
+    .burger-menu{
+        display: none;
+    }
 
     nav {
         display: block;
