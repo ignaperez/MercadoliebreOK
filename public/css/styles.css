@@ -4,9 +4,15 @@
     box-sizing: border-box;
 }
 
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     background-color: #ebebeb;
+}
+
+.foot-pad {
+    padding: 0 5 0 5;
 }
 
 h3 {
@@ -17,55 +23,75 @@ p {
     font-size: 12px;
 }
 
-div.top-header {
-    padding: 5%;
-}
-
 header {
     background-color: #EAC926;
 }
 
-header div.logo {
-    width: 50%;
-}
-
-header div.logo {
-    padding: 10px;
-}
-
-header nav {
-    font-size: 12px;
-}
-
-header ul li {
-    list-style-type: none;
-}
-
-header ul li a {
+a {
     text-decoration: none;
-    color: #000;
+    color: black;
 }
 
-header .form .input {
-    background-color: #FFF;
-    border: 1px solid #000;
-    outline: none;
-    color: #666;
-    padding: 2px;
+ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
 }
 
-header .form .submit {
-    background-color: #FFF;
-    border: 1px solid #000;
-    color: #666;
-    width: 10%;
+.contenedor-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
-header div.top-header p {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
+
+
+.logo {
+    flex: 5;
+    width: 14%;
+    justify-content: center;
+    align-self: center;
+    padding: 1%;
+
+
+
 }
+
+
+
+.contenedor-busqueda {
+
+    padding-top: 2%;
+    justify-content: center;
+    display: flex;
+    flex: 5;
+
+}
+
+.input-busqueda {
+    background-color: white;
+    border: white solid 1vh;
+    border-radius: 1vh;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0%;
+
+}
+
+.boton-buscar {
+    background-color: white;
+    border: white solid 1vh;
+    border-radius: 1vh;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+}
+
+nav {
+    display: none;
+}
+
+
 
 div.burger-menu {
     text-align: center;
@@ -101,8 +127,8 @@ h3,
 }
 
 .description {
-    display: none;
-    margin-top: 20px;
+    visibility: hidden;
+    margin: 20px;
     flex: 10;
 
 
@@ -134,7 +160,7 @@ main section article i,
     flex: 7;
 }
 
-main section article i {
+.camion {
     display: block;
     font-size: 16px;
     padding: 5px;
@@ -147,6 +173,12 @@ main section article i {
     right: 20px;
     top: -15px;
 
+
+}
+
+.camion:hover {
+    transform: rotateZ(-90deg);
+    transition-duration: 1s;
 }
 
 main section h3 {
@@ -165,62 +197,207 @@ article div.main-article {
 
 }
 
-main section article .description:hover {
-    display: block;
-    background-color: red;
-}
 
-header nav {
-    font-size: 12px;
-    display: none;
-}
-
-@media (min-width: 361px) {
-   .products{
+.products {
     display: flex;
-    flex-flow: wrap;
-   }
-   .item {
-    background-color: red;
-    -ms-flex-item-align: auto;
-    flex: 4;
-   }
-   .item:hover{
-    display: block;
-    
-    
-    background-color: #EAC926;
-   
-   }
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-   
+.item {
+    margin: 10px;
+    background-color: white;
+    transition-property: all, 0, 5s;
+}
 
-    main section article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+.item:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+}
+
+.item:hover .description {
+    visibility: visible;
+}
+
+footer {
+    text-align: center;
+    background-color: white;
+}
+
+footer section p i {
+    font-size: 8vh;
+}
+
+.icons-blue {
+    color: #1259c3;
+    width: 2em;
+    margin-top: 5vw;
+}
+
+.icons-blue:hover {
+    color: gray;
+    transition-duration: 0, 6s;
+}
+
+/*ESTILOS FORMULARIO REGISTRO*/
+.formulario-registro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.registro-input {
+    width: 80%;
+    margin: 2vh;
+    padding: 2vh;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+    border-radius: 2vh;
+    border: white solid;
+}
+
+.etiquetas-form {
+    text-align: left;
+
+}
+
+.contenedor-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.p-form {
+    font-size: medium;
+    padding-bottom: 2vh;
+}
+
+.radios {
+    padding: 2vh;
+}
+
+.checks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.intereses {
+    display: flex;
+    padding: 1%;
+    flex-wrap: nowrap;  
+}
+.espacio{
+    padding-left: 1vh;
+}
+
+
+/*MEDIA QUERY*/
+@media (min-width: 361px) {
+    .item {
+        width: 43%;
     }
 
-    header nav {
+    nav {
         display: block;
     }
 
-    
+    .nav-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    .li-item {
+        padding: 2vh;
+    }
+
+    .contenedor-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+
+    }
+
+    .logo {
+        flex: 5;
+        justify-content: center;
+
+    }
+
+    .contenedor-busqueda {
+        flex: 5;
+        justify-content: center;
+        display: flex;
+    }
+
+    .header-compra-cuotas {
+        justify-content: center;
+        align-self: center;
+        text-align: center;
+
+    }
+
+
+
+
 }
 
 
 @media (min-width: 769px) {
+    .item {
+        width: 22%;
+    }
 
-    .description {
-        display: none;
+    .contenedor-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
 
     }
 
+    .logo {
+        flex: 2;
+        justify-content: center;
 
 
-    main section article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
-    header nav {
-        display: block;
+    .contenedor-busqueda {
+
+        flex: 4;
+        justify-content: center;
+    }
+
+    .header-compra-cuotas {
+        flex: 4;
+        justify-content: center;
+        align-self: center;
+        text-align: center;
+    }
+
+
+    .footer {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .footer-section {
+        width: 30%;
+        padding: 2vh;
+    }
+
+    .derechos {
+        width: 100%;
+        text-align: left;
+        padding-left: 5vh;
+    }
+
+    .formulario-registro {
+        width: 50%;
+
     }
 }
